@@ -5,3 +5,11 @@ section{
 section.active{
 	display: block;
 }
+
+#loader {
+    display: none;
+}
+
+#loader.loading {
+    display: block;
+}
