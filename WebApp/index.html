@@ -9,6 +9,7 @@
         <link rel="author" href="humans.txt">
     </head>
     <body>
+<<<<<<< HEAD
 		<main id="content">
 			<section id="about" data-route="about">
 					<header>
@@ -33,14 +34,65 @@
 			</section>
 		</main>
 		
+=======
+>>>>>>> FETCH_HEAD
 		<header>
 			<nav>
 				<ul>
 					<li><a href="#about">About</a></li>
-					<li><a href="#movies">Movies</a></li>
+					<li><a href="#movies">Movies</a>
+                        <p>Filter op:</p>
+                        <ul>
+                            <li><a href="#movies/genre/Horror">Horror</a></li>
+                            <li><a href="#movies/genre/Drama">Drama</a></li>
+                            <li><a href="#movies/genre/Thriller">Thriller</a></li>
+                        </ul> 
+                    </li>
 				</ul>
 			</nav>
 		</header>
+        <div id="loader" class="loading">
+            <h1>Laden..............</h1>
+
+            je stintk
+        </div>
+        <main id="content">
+            <section id="about" class="section">
+                    <header>
+                        <h1 data-bind="title"></h1>
+                        <div class="description">
+                            <p class="p"></p>
+                        </div>
+                    </header>
+            </section>
+
+            <section id="movies" class="section">
+                <hr/>
+                <h1 data-bind="title"></h1> 
+                <div class="moviesContent"> 
+                    <article> 
+                        <header> 
+                            <em class="titleReleasedate"><time class="release_date"></time></em> 
+                        </header> <figure class="imgBox"> <img class="cover"> </figure> 
+                        <p class="plot"></p> 
+                        <div>Score: <span class="reviewScore"></span></div>
+                        <p><a class="readMore">Lees meer</a></p>
+                    </article> 
+                </div> 
+            </section>
+
+            <section id="detail" class="section">
+                <h1>Details van <span data-bind="title"></span></h1> 
+                    <header> 
+                            <em class="titleReleasedate"><time class="release_date"></time></em> 
+                        </header> <figure class="imgBox"> <img class="cover"> </figure> 
+                        <p class="plot"></p> 
+                        <div>Score: <span class="reviewScore"></span></div>
+                    </header>
+            </section>
+
+        </main>
+        
 		<script src="static/js/vendor/transparency.min.js"></script>
 		<script src="static/js/vendor/routie.js"></script>
 		<script src="static/js/vendor/underscore.js"></script>
