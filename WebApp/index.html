@@ -7,95 +7,120 @@
         <title>My Favorite Movies</title>
         <link rel="stylesheet" href="static/css/style.css">
         <link rel="author" href="humans.txt">
-    </head>
-    <body>
-<<<<<<< HEAD
-		<main id="content">
-			<section id="about" data-route="about">
-					<header>
-						<h1 data-bind="title"></h1>
-						<div class="description">
-							<p class="p"></p>
-						</div>
-					</header>
-			</section>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
-			<section id="movies" data-route="movies"> 
-				<h1 data-bind="title"></h1> 
-				<div class="moviesContent"> 
-					<article> 
-						<header> 
-						
-							<em class="titleReleasedate"><time class="release_date"></time></em> 
-						</header> <figure class="imgBox"> <img class="cover"> </figure> 
-						<p class="plot"></p> 
-					</article> 
-				</div> 
-			</section>
-		</main>
-		
-=======
->>>>>>> FETCH_HEAD
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#about">About</a></li>
-					<li><a href="#movies">Movies</a>
-                        <p>Filter op:</p>
+    </head>
+    <body> 
+
+    <div id="nav-container">
+        <div class="container clearfix">
+        <h1 id="logo">
+            <a href="index.html">LOGO</a>
+        </h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#movies">Movies</a>
                         <ul>
                             <li><a href="#movies/genre/Horror">Horror</a></li>
                             <li><a href="#movies/genre/Drama">Drama</a></li>
                             <li><a href="#movies/genre/Thriller">Thriller</a></li>
+                            <li><a href="#movies/genre/Crime">Crime</a></li>
+                            <li><a href="#movies/genre/Action">Action</a></li>
+                            <li><a href="#movies/genre/Adventure">Adventure</a></li>
                         </ul> 
                     </li>
-				</ul>
-			</nav>
-		</header>
-        <div id="loader" class="loading">
-            <h1>Laden..............</h1>
-
-            je stintk
+                </ul>
+            </nav>
         </div>
-        <main id="content">
-            <section id="about" class="section">
-                    <header>
-                        <h1 data-bind="title"></h1>
-                        <div class="description">
-                            <p class="p"></p>
-                        </div>
-                    </header>
-            </section>
+        </div> 
+<div id="wrapper">        
+       <div id="content-container"> 
 
-            <section id="movies" class="section">
-                <hr/>
-                <h1 data-bind="title"></h1> 
-                <div class="moviesContent"> 
-                    <article> 
-                        <header> 
-                            <em class="titleReleasedate"><time class="release_date"></time></em> 
-                        </header> <figure class="imgBox"> <img class="cover"> </figure> 
-                        <p class="plot"></p> 
-                        <div>Score: <span class="reviewScore"></span></div>
-                        <p><a class="readMore">Lees meer</a></p>
-                    </article> 
-                </div> 
-            </section>
+            <div id="loader" class="loading">
+                    <div class="result">
+                        <div class="example-container" id="example-clock-container"></div>
+                    </div>
+            </div>
 
-            <section id="detail" class="section">
-                <h1>Details van <span data-bind="title"></span></h1> 
-                    <header> 
-                            <em class="titleReleasedate"><time class="release_date"></time></em> 
-                        </header> <figure class="imgBox"> <img class="cover"> </figure> 
-                        <p class="plot"></p> 
-                        <div>Score: <span class="reviewScore"></span></div>
-                    </header>
-            </section>
+            <main id="content">
 
-        </main>
-        
-		<script src="static/js/vendor/transparency.min.js"></script>
-		<script src="static/js/vendor/routie.js"></script>
-		<script src="static/js/vendor/underscore.js"></script>
+                    <section id="home" class="section">
+                        
+                        blabla index content
+
+                    </section>
+                    <section id="about" class="section">
+                            <header>
+                                <h1 data-bind="title"></h1>
+                                <div class="description">
+                                    <p class="p"></p>
+                                </div>
+                            </header>
+                    </section>
+
+                    <section id="movies" class="section">
+                        <hr/>
+                    <div class="moviesContent"> 
+                            <h1 data-bind="title"></h1> 
+                            <article> 
+                                <header> 
+                                    <em class="titleReleasedate"><time class="release_date"></time></em> 
+                                </header> <figure class="imgBox"> <div>Score: <span class="reviewScore"></span></div><img class="cover"> </figure> 
+                                <p class="plot"><a class="readMore">Lees meer</a></p> 
+                                
+                            </article> 
+                        </div> 
+                    </section>
+
+                    <section id="detail" class="section">
+                        <h1>Details van <span data-bind="title"></span></h1> 
+                            <header> 
+                                <em class="titleReleasedate"><time class="release_date"></time></em> 
+                                </header><figure class="imgBox"> <div>Score: <span class="reviewScore"></span></div><img class="cover"> </figure> 
+                                <p class="plot"></p> 
+                                
+                            
+                            <article>
+                                <div data-bind="directors">
+                                    <h1 data-bind="name"><h1>
+                                </div> 
+
+                                <h2>Actors:</h2>
+                                <div data-bind="actors">
+                                        <header>
+                                            <p>Actor: <span data-bind="actor_name"></span></a></p>
+                                            <p>Character: <span data-bind="character"></span></p>
+                                            <p>Profile:<a data-bind="url_profile" target="_blank"></a></p>
+                                            <p>Photo Actor: <img class="url_photo"></p>
+                                        </header>
+                                    <div class="clear"></div>
+                                </div>
+
+                                </div> 
+                            </article>  
+                    </section>
+                </main>
+    </div> 
+
+
+        <div id='mySwipe' class='swipe'>
+            <div class='swipe-wrap'>
+                <div><img src="static/images/image_1.jpg"/></div>
+                <div><img src="static/images/image_2.jpg"/></div>
+                <div><img src="static/images/image_3.jpg"/></div>
+            </div>
+     </div>              
+</div>
+                
+        <script src="static/js/vendor/transparency.min.js"></script>
+        <script src="static/js/vendor/routie.js"></script>
+        <script src="static/js/vendor/underscore.js"></script>
+        <script src='static/js/vendor/swipe.js'></script>
+        <script src='static/js/vendor/progressbar.js'></script>
+        <script src='static/js/vendor/classie.js'></script>
         <script src="static/js/app.js"></script>
     </body>
 </html>
+
